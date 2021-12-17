@@ -161,9 +161,9 @@ const ClientDetails = () => {
 
   const handleInterfaceDelete = (id) => {
     confirm({
-      title: 'Are you sure?',
+      title: 'Tem certeza?',
       details:
-        'This will remove the node from the associated network, and destroy all of its connections.',
+        'Isso removerá o nó da rede associada e destruirá todas as suas conexões.',
       isDestructive: true,
       onConfirm: () => {
         deleteInterface({ variables: { id } })
@@ -203,8 +203,8 @@ const ClientDetails = () => {
 
   const handleConnectionDelete = (id) => {
     confirm({
-      title: 'Are you sure?',
-      details: `Depending on your network's topology, this might interfere in the node's ability to communicate with others.`,
+      title: 'Tem certeza?',
+      details: `Dependendo da topologia da sua rede, isso pode interferir na capacidade do nó de se comunicar com os outros.`,
       isDestructive: true,
       onConfirm: () => {
         deleteConnection({ variables: { id } })
@@ -286,14 +286,14 @@ const ClientDetails = () => {
           </Box>
           {interfaces.length > 0 && (
             <Button variant="primary" ml="auto" onClick={handleJoinNetworkButtonClick}>
-              Join Network
+              Participar da rede
             </Button>
           )}
         </Box>
       </Box>
 
       <Box px={3} py={2} border="discrete" alignItems="center">
-        <SectionTitle width="160px">Client details</SectionTitle>
+        <SectionTitle width="160px">Cliente</SectionTitle>
         <Box mr={4}>
           <Text textStyle="strong" fontSize="12px" mr={2}>
             Status
@@ -305,7 +305,7 @@ const ClientDetails = () => {
 
         <Box mr={4}>
           <Text textStyle="strong" fontSize="12px" mr={2}>
-            Advertise Address
+            IP
           </Text>
           <Text textStyle="detail" mr={3}>
             {node.AdvertiseAddress ? node.AdvertiseAddress : 'N/A'}
@@ -349,8 +349,8 @@ const ClientDetails = () => {
 
       {interfaces.length === 0 && (
         <EmptyState
-          title="No networks."
-          description="By joining a network clients can communicate with each other."
+          title="Sem redes."
+          description="Ao ingressar em uma rede, os clientes podem se comunicar uns com os outros."
           image={<Icon my={4} icon={<icons.Network />} size="48px" color="neutral" />}
           extra={
             <Box alignItems="center" mt="24px">
@@ -363,7 +363,7 @@ const ClientDetails = () => {
       )}
 
       <Box alignItems="flex-end" mt={4} mb={3}>
-        <Text textStyle="subtitle">Connections</Text>
+        <Text textStyle="subtitle">Conexões</Text>
       </Box>
       <List>
         {connections.map((el) => (
@@ -388,13 +388,13 @@ const ClientDetails = () => {
 
       {interfaces.length > 0 && connections.length === 0 && (
         <EmptyState
-          title="No connections."
-          description="Connect with peers in your networks to interact wth them."
+          title="Sem conexões."
+          description="Conecte-se com colegas em suas redes para interagir com eles."
           image={<Icon my={4} icon={<icons.Connection />} size="48px" color="neutral" />}
           extra={
             <Box alignItems="center" mt="24px">
               <Button variant="primary" onClick={handleConnectToPeerButtonClick}>
-                Connect to Peer
+                Conectar ao Peer
               </Button>
             </Box>
           }
@@ -402,13 +402,13 @@ const ClientDetails = () => {
       )}
       {interfaces.length === 0 && (
         <EmptyState
-          title="No connections."
-          description="Nodes need to join a network before they can connect to peers."
+          title="Sem conexões."
+          description="Os hosts precisam se conectar a uma rede antes de se conectar aos pares."
           image={<Icon my={4} icon={<icons.Connection />} size="48px" color="neutral" />}
           extra={
             <Box alignItems="center" mt="24px">
               <Button variant="primary" onClick={handleJoinNetworkButtonClick}>
-                Join Network
+                Unir a Rede
               </Button>
             </Box>
           }
@@ -420,8 +420,8 @@ const ClientDetails = () => {
       </Text>
       {Object.keys(node.Meta).length === 0 && (
         <EmptyState
-          title="No metadata."
-          description="Node does not contain any metadata."
+          title="Sem metadados."
+          description="Host não contém metadados."
           image={<Icon my={4} icon={<icons.Label />} size="48px" color="neutral" />}
         />
       )}

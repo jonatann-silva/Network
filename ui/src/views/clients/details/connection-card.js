@@ -171,7 +171,7 @@ const ConnectionCard = ({
               {id.split('-')[0]}
             </Text>
             <Text textStyle="detail" fontSize="12px">
-              Connected to{' '}
+              Conectado a{' '}
               <StyledLink to={`/ui/clients/${peer.Node.ID}/`} state={{ connectionId: id }}>
                 {toInterfaceId !== null && toInterfaceId.split('-')[0]} ({peer.Node.Name})
                 <Icon icon={<icons.ExternalLink />} size="10px" color="neutralDarker" ml="1" />
@@ -211,13 +211,13 @@ const ConnectionCard = ({
           <HiddenContentContainer>
             <Box alignItems="center" mb={2}>
               <Text textStyle="subtitle" fontSize="16px">
-                Configuration
+                Configuração
               </Text>
             </Box>
 
             <ConfigurationGrid>
               <Box flexDirection="column" gridColumn="1 / span 10">
-                <Text textStyle="detail">Allowed IPs</Text>
+                <Text textStyle="detail">IPs Permitidos</Text>
                 <TagsInput
                   value={formik.values.allowedIPs.map((el) => ({ label: el, value: el }))}
                   onChange={(values) =>
@@ -244,12 +244,12 @@ const ConnectionCard = ({
             <Box alignItems="center" mt={3}>
               <div>
                 <Text textStyle="detail">
-                  * This configuration applies to interface <strong>{self.ID.split('-')[0]}</strong>{' '}
-                  {self.Address ? `(${self.Address})` : ''} of the node identified by{' '}
+                  * Esta configuração se aplica à interface <strong>{self.ID.split('-')[0]}</strong>{' '}
+                  {self.Address ? `(${self.Address})` : ''} do host identificado por{' '}
                   <strong>{self.Node.ID.split('-')[0]}</strong>.
                 </Text>
                 <Text textStyle="detail">
-                  ** Interface <strong>{self.ID.split('-')[0]}</strong> is connected to interface{' '}
+                  ** Interface <strong>{self.ID.split('-')[0]}</strong> está conectado à interface{' '}
                   <strong>{peer.ID.split('-')[0]}</strong> {peer.Address ? `(${peer.Address})` : ''}{' '}
                   on node <strong>{peer.Node.ID.split('-')[0]}</strong>
                 </Text>

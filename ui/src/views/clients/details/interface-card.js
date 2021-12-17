@@ -150,7 +150,7 @@ const InterfaceCard = ({
           </Box>
         </Box>
 
-        <Text textStyle="detail" fontSize="12px" title="Managed address" justifySelf="center">
+        <Text textStyle="detail" fontSize="12px" title="Endereço gerenciado" justifySelf="center">
           {address}
         </Text>
 
@@ -164,7 +164,7 @@ const InterfaceCard = ({
 
         <Badge alignItems="center" justifySelf="center">
           <Icon icon={<icons.ConnectionSmall />} color="neutralDarker" size="14px" mr={'4px'} />
-          <Text textStyle="detail" fontSize="10px" title="Managed address">
+          <Text textStyle="detail" fontSize="10px" title="Endereço gerenciado">
             {connectionsCount}
           </Text>
         </Badge>
@@ -191,7 +191,7 @@ const InterfaceCard = ({
           <HiddenContentContainer>
             <Box alignItems="center" mb={2}>
               <Text textStyle="subtitle" fontSize="16px">
-                Configuration
+                Configuração
               </Text>
               {publicKey && (
                 <Text textStyle="detail" ml={2}>
@@ -203,7 +203,7 @@ const InterfaceCard = ({
             <ConfigurationGrid mt={3}>
               <Box flexDirection="column" gridColumn="span 6">
                 <Text textStyle="detail" mb={1}>
-                  Address
+                  IP
                 </Text>
                 <TextInput
                   name="address"
@@ -214,7 +214,7 @@ const InterfaceCard = ({
 
               <Box flexDirection="column" gridColumn="span 2">
                 <Text textStyle="detail" mb={1}>
-                  Listen Port
+                  Porta
                 </Text>
                 <NumberInput
                   disabled
@@ -233,7 +233,7 @@ const InterfaceCard = ({
 
               <Box flexDirection="column" gridColumn="span 1">
                 <Text textStyle="detail" mb={1}>
-                  Table
+                  Tabela
                 </Text>
                 <TextInput name="table" {...formik.getFieldProps('table')} placeholder="12345" />
               </Box>
@@ -263,7 +263,7 @@ const InterfaceCard = ({
                 <TextInput
                   name="preDown"
                   {...formik.getFieldProps('preDown')}
-                  placeholder="/bin/echo 'Goodbye world!'"
+                  placeholder="/bin/echo 'Adeus!'"
                 />
               </Box>
 
@@ -293,7 +293,7 @@ const InterfaceCard = ({
             <Box ml="auto" alignItems="center">
               {showSpinner && <StyledSpinner />}
               <Button variant="primary" mt={3} height="40px" onClick={handleSaveButtonClick}>
-                Save
+                Salvar
               </Button>
             </Box>
           </HiddenContentContainer>

@@ -168,7 +168,7 @@ const Topology = () => {
   ) : (
     <Container>
       <Box mb={3} width="100%">
-        <Text textStyle="title">Network topology</Text>
+        <Text textStyle="title">Topologia de rede</Text>
       </Box>
 
       {isLoading && <Spinner />}

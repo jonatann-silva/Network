@@ -55,12 +55,12 @@ const ClientsListView = () => {
   return (
     <Container>
       <Box mb={3}>
-        <Text textStyle="title">Clients</Text>
+        <Text textStyle="title">Clientes</Text>
       </Box>
       <Box my={3}>
         <SearchInput
           width="100%"
-          placeholder="Search..."
+          placeholder="Busca..."
           onChange={(value) => setSearchFilter(value)}
           mr={2}
         />
@@ -68,7 +68,7 @@ const ClientsListView = () => {
       {isError ? (
         <ErrorState />
       ) : isEmpty ? (
-        <EmptyState description="Oops! It seems that you don't have any clients yet registered in this network." />
+        <EmptyState description="Oops! Parece que você ainda não tem nenhum cliente registrado nesta rede." />
       ) : (
         <InfiniteLoader
           itemCount={nodes.length}

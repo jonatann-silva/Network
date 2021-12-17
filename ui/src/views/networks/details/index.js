@@ -75,8 +75,8 @@ const NetworkDetails = () => {
 
   const handlePeerDelete = (id) => {
     confirm({
-      title: 'Are you sure?',
-      details: `This will remove the node from the network, destroying its interface and connections.`,
+      title: 'Tem certeza?',
+      details: `Isso removerá o nó da rede, destruindo sua interface e conexões.`,
       isDestructive: true,
       onConfirm: () => {
         deleteInterface({
@@ -111,7 +111,7 @@ const NetworkDetails = () => {
         onClose={() => setAdmitNodeModalOpen(false)}
       />
 
-      <BackLink to="/ui/networks" text="Networks" mb={3} />
+      <BackLink to="/ui/networks" text="Redes" mb={3} />
       <Box alignItems="center" mb={4}>
         <StyledIcon mr="12px" p={2} icon={<icons.Network />} size="48px" color="neutralDarker" />
         <div>
@@ -125,17 +125,17 @@ const NetworkDetails = () => {
       <Box px={3} py={2} border="discrete" alignItems="center">
         <Box mr={4}>
           <Text textStyle="strong" fontSize="12px" mr={2}>
-            Address range
+           Range IP
           </Text>
           <Text textStyle="detail">{network.AddressRange}</Text>
         </Box>
       </Box>
 
       <Box alignItems="center" mt={4} mb={3}>
-        <Text textStyle="subtitle">Nodes</Text>
+        <Text textStyle="subtitle">Hosts</Text>
         {network.Interfaces.length > 0 && (
           <Button variant="primary" ml="auto" onClick={handleAdmitNodeButtonClick}>
-            Admit Node
+            Permitir host.
           </Button>
         )}
       </Box>
@@ -157,13 +157,13 @@ const NetworkDetails = () => {
       </List>
       {network.Interfaces.length === 0 && (
         <EmptyState
-          title="No nodes."
-          description="Nodes can be added to a network at any time."
+          title="Sem hosts."
+          description="Hosts podem ser adicionados a uma rede a qualquer momento."
           image={<Icon my={4} icon={<icons.Host />} size="48px" color="neutral" />}
           extra={
             <Box alignItems="center" mt="24px">
               <Button variant="primary" onClick={handleAdmitNodeButtonClick}>
-                Admit Node
+                Permitir Host
               </Button>
             </Box>
           }

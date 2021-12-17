@@ -52,15 +52,15 @@ const LinkCard = ({
       <IconButton ml="auto" icon={<icons.Connection />} />
     </IconContainer>
     <Text textStyle="detail" my={1}>
-      FROM
+      A PARTIR DE
     </Text>
     <TextInput height={1} value={`${sourceName} (${sourceAddress})`} mb={1} />
     <Text textStyle="detail" my={1}>
-      TO
+      PARA
     </Text>
     <TextInput height={1} value={`${targetName} (${targetAddress})`} mb={1} />
     <Text textStyle="detail" my={1}>
-      ALLOWED IPS
+      IPS Permitidos.
     </Text>
     <TextInput height={1} value={allowedIPs} mb={1} />
     <Text textStyle="detail" my={1}>
@@ -80,7 +80,7 @@ LinkCard.propTypes = {
   persistentKeepalive: PropTypes.string,
 }
 
-LinkCard.defaultProps = {
+LinkCard.defaultPropsPermitido  = {
   allowedIPs: undefined,
   persistentKeepalive: undefined,
 }

@@ -124,7 +124,7 @@ const PeerCard = ({
         </Box>
         <Box width="200px" justifyContent="center">
           <StyledLink href={`http://${nodeAdvertiseAddress}`}>
-            <Text textStyle="detail" fontWeight="600" fontSize="12px" title="Public address">
+            <Text textStyle="detail" fontWeight="600" fontSize="12px" title="IP Publico">
               {nodeAdvertiseAddress}
             </Text>
           </StyledLink>

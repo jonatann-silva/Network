@@ -87,7 +87,7 @@ const NetworkCard = ({ id, name, addressRange, numHosts, isSelected, onClick }) 
           </Text>
         </Box>
         <Box width="200px" justifyContent="center">
-          <Text textStyle="detail" fontSize="12px" title="Managed address">
+          <Text textStyle="detail" fontSize="12px" title="Endereço de gerencia">
             {addressRange}
           </Text>
         </Box>
@@ -113,23 +113,23 @@ const NetworkCard = ({ id, name, addressRange, numHosts, isSelected, onClick }) 
           <HiddenContentContainer>
             <Box alignItems="center" mb={3}>
               <Text textStyle="subtitle" fontSize="16px">
-                Interface Configuration
+                Configuração de Interface
               </Text>
               <Button variant="primary" ml="auto" height="32px">
-                Save
+                Salvar
               </Button>
             </Box>
 
             <Box alignItems="center" mb={2}>
               <Text textStyle="body" mr={2}>
-                Address
+                IP
               </Text>
               <TextInput placeholder="192.168.0.1/24" height="40px" width="180px" />
             </Box>
 
             <Box alignItems="center">
               <Text textStyle="body" mr={2}>
-                Listen Port
+                Porta
               </Text>
               <NumberInput placeholder="51820" height="40px" width="180px" />
             </Box>

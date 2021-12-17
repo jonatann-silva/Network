@@ -61,15 +61,15 @@ const InterfaceCard = ({ id, name, address, advertiseAddress, listenPort, lastSe
       </IconContainer>
       <Box flexDirection="column">
         <Text textStyle="detail" my={1}>
-          NAME
+          NOME
         </Text>
         <TextInput height={1} value={name} mb={1} />
         <Text textStyle="detail" my={1}>
-          ADDRESS
+          IP
         </Text>
         <TextInput height={1} value={address} mb={1} />
         <Text textStyle="detail" my={1}>
-          LISTEN PORT
+          PORTA
         </Text>
         <TextInput height={1} value={listenPort} placeholder="N/A" mb={1} />
       </Box>
