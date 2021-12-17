@@ -274,7 +274,7 @@ const ClientDetails = () => {
         onJoin={handleConnectToPeer}
         onClose={() => setConnectPeerModalOpen(false)}
       />
-      <BackLink text="Clients" to={`/ui/clients`} mb={3} />
+      <BackLink text="Clientes" to={`/ui/clients`} mb={3} />
       <Box alignItems="center" mb={4}>
         <StyledIcon mr="12px" p={2} icon={<icons.Host />} size="48px" color="neutralDarker" />
         <Box width="100%">
@@ -355,7 +355,7 @@ const ClientDetails = () => {
           extra={
             <Box alignItems="center" mt="24px">
               <Button variant="primary" onClick={handleJoinNetworkButtonClick}>
-                Join Network
+                Unir a Rede
               </Button>
             </Box>
           }
